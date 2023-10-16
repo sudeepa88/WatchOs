@@ -17,6 +17,7 @@
 		D92741D42ADC0132000173BD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92741D32ADC0132000173BD /* ComplicationController.swift */; };
 		D92741D62ADC0133000173BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D92741D52ADC0133000173BD /* Assets.xcassets */; };
 		D92741D92ADC0133000173BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D92741D82ADC0133000173BD /* Preview Assets.xcassets */; };
+		D97235ED2ADD945200BA9BD5 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97235EC2ADD945200BA9BD5 /* AddTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		D92741D82ADC0133000173BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D92741DA2ADC0133000173BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D92741DB2ADC0134000173BD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D97235EC2ADD945200BA9BD5 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				D92741DA2ADC0133000173BD /* Info.plist */,
 				D92741DB2ADC0134000173BD /* PushNotificationPayload.apns */,
 				D92741D72ADC0133000173BD /* Preview Content */,
+				D97235EC2ADD945200BA9BD5 /* AddTask.swift */,
 			);
 			path = "Watch_out WatchKit Extension";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				D92741D02ADC0132000173BD /* NotificationController.swift in Sources */,
 				D92741CE2ADC0132000173BD /* ContentView.swift in Sources */,
+				D97235ED2ADD945200BA9BD5 /* AddTask.swift in Sources */,
 				D92741D42ADC0132000173BD /* ComplicationController.swift in Sources */,
 				D92741CC2ADC0132000173BD /* Watch_outApp.swift in Sources */,
 				D92741D22ADC0132000173BD /* NotificationView.swift in Sources */,

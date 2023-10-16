@@ -8,31 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isTextFieldVisible = false
-    @State private var name: String = ""
     var body: some View {
         
         VStack{
-            
-            HStack{
-                Button(action: {
-                    isTextFieldVisible.toggle()
-                }){
-                    Image(systemName: "plus")
+            NavigationLink{
+                AddTask()
+            }label: {
+                HStack{
                     
-                }
-            }.frame(width:100, height:20, alignment:.center)
-           Spacer()
+                    Image(systemName: "plus")
+                        .font(.system(size:22))
+                    
+                    
+                }.frame(width:100, height:22, alignment:.center)
+            }
+            
+            
+             Spacer()
             VStack{
                 
                 ScrollView{
-                    
-                    
-                   
-                       
-                    
-                    
-                    
             VStack(spacing:10){
                 
                 ZStack{
@@ -43,12 +38,12 @@ struct ContentView: View {
                     .overlay(RoundedRectangle(cornerRadius:20)
                                     .fill(Color.gray))
                 //no.1
-                    if isTextFieldVisible{
-                    VStack{
-                        TextField("Enter Your task here ! ",text:$name)
-                    }
-                    }
+                    
+
+                    
                 }//First card(ZSTACk)
+                
+                
                 ZStack{
                 VStack{
                     
@@ -57,13 +52,6 @@ struct ContentView: View {
                     .overlay(RoundedRectangle(cornerRadius:20)
                                     .fill(Color.gray))
                         //no.1
-                    
-                    VStack{
-                         
-                        
-                        
-                        Text("\(name)")
-                    }.frame(width: 100, height: 48)
                     
                 }//Second card (ZStack)
                 
@@ -107,7 +95,7 @@ struct ContentView: View {
             
             
             }.frame(maxHeight:.infinity,alignment:.topLeading)
-                            .navigationBarHidden(true)
+                            
                         
             //vstack
                     
@@ -119,7 +107,8 @@ struct ContentView: View {
                
             }
            
-        }//main zstack
+        }.frame(maxWidth:.infinity,maxHeight:.infinity,alignment:.topLeading)
+            .navigationBarHidden(true)//main vstack
        
     }
         
@@ -127,9 +116,15 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
+        NavigationView{
+            Group {
+                
+                
+                    ContentView()
+            
+                
+            }
         }
+        
     }
 }
