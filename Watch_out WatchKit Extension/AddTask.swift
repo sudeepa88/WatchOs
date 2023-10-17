@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddTask: View {
-    @State var okay:String = ""
+    @Binding var searchedText: String
     var body: some View {
         VStack{
             HStack{
@@ -18,7 +18,7 @@ struct AddTask: View {
             }
             
             VStack{
-                TextField("Enter your Task:",text:$okay)
+                TextField("Enter your Task:",text:$searchedText)
                     
             }.frame(width: 180, height:30, alignment:.leading)
                 .padding(.top,20)
@@ -30,7 +30,9 @@ struct AddTask: View {
 }
 
 struct AddTask_Previews: PreviewProvider {
+    @State static var searchedText: String = ""
     static var previews: some View {
-        AddTask()
+        AddTask(searchedText:$searchedText)
     }
 }
+

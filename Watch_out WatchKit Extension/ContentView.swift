@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+   // @Binding var okay:String
+    @State var  searchedText: String = ""
+
     var body: some View {
-        
         VStack{
             NavigationLink{
-                AddTask()
+                AddTask(searchedText: $searchedText)
             }label: {
-                HStack{
+              
                     
                     Image(systemName: "plus")
                         .font(.system(size:22))
                     
                     
-                }.frame(width:100, height:22, alignment:.center)
+                
             }
             
             
@@ -39,7 +41,10 @@ struct ContentView: View {
                                     .fill(Color.gray))
                 //no.1
                     
-
+                    VStack{
+                        Text(self.searchedText)
+                        //Text(self.okay)
+                    }
                     
                 }//First card(ZSTACk)
                 
@@ -99,7 +104,7 @@ struct ContentView: View {
                         
             //vstack
                     
-                }.frame(height:.infinity)
+                }.frame(maxHeight:.infinity)
                         
                         
                    //for scrollview
@@ -115,6 +120,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    //@State static var okay: String = ""
     static var previews: some View {
         NavigationView{
             Group {
