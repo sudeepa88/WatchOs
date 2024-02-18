@@ -121,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D92741CB2ADC0132000173BD /* Watch_outApp.swift */,
+				D97235EC2ADD945200BA9BD5 /* AddTask.swift */,
 				D92741CD2ADC0132000173BD /* ContentView.swift */,
 				D92741CF2ADC0132000173BD /* NotificationController.swift */,
 				D92741D12ADC0132000173BD /* NotificationView.swift */,
@@ -129,7 +130,6 @@
 				D92741DA2ADC0133000173BD /* Info.plist */,
 				D92741DB2ADC0134000173BD /* PushNotificationPayload.apns */,
 				D92741D72ADC0133000173BD /* Preview Content */,
-				D97235EC2ADD945200BA9BD5 /* AddTask.swift */,
 			);
 			path = "Watch_out WatchKit Extension";
 			sourceTree = "<group>";

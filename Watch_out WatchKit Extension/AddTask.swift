@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AddTask: View {
-    @Binding var searchedText: String
+    @Binding var searchedText: String 
+    
     var body: some View {
         VStack{
             HStack{
@@ -19,6 +20,8 @@ struct AddTask: View {
             
             VStack{
                 TextField("Enter your Task:",text:$searchedText)
+                    .textContentType(.oneTimeCode)
+                        
                     
             }.frame(width: 180, height:30, alignment:.leading)
                 .padding(.top,20)
